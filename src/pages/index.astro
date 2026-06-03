@@ -132,17 +132,21 @@ import jhuLogo    from '../assets/img/logo-jhu.png';
         <h2>Featured Partners</h2>
       </div>
       <div class="partners-grid">
-        <div class="partner-logo logo-govex">
-          <img src={govexLogo.src} alt="GovEx — Bloomberg Center for Government Excellence at Johns Hopkins" />
+        <div class="partner-stack">
+          <div class="partner-logo logo-govex">
+            <img src={govexLogo.src} alt="GovEx — Bloomberg Center for Government Excellence at Johns Hopkins" />
+          </div>
+          <div class="partner-logo logo-bcpi">
+            <img src={bcpiLogo.src} alt="Bloomberg Center for Public Innovation at Johns Hopkins" />
+          </div>
         </div>
-        <div class="partner-logo logo-bcpi">
-          <img src={bcpiLogo.src} alt="Bloomberg Center for Public Innovation at Johns Hopkins" />
-        </div>
-        <div class="partner-logo logo-everytown">
-          <img src={everytownLogo.src} alt="Everytown for Gun Safety" />
-        </div>
-        <div class="partner-logo logo-jhu">
-          <img src={jhuLogo.src} alt="Johns Hopkins University" />
+        <div class="partner-stack">
+          <div class="partner-logo logo-everytown">
+            <img src={everytownLogo.src} alt="Everytown for Gun Safety" />
+          </div>
+          <div class="partner-logo logo-jhu">
+            <img src={jhuLogo.src} alt="Johns Hopkins University" />
+          </div>
         </div>
       </div>
     </div>
@@ -311,10 +315,15 @@ import jhuLogo    from '../assets/img/logo-jhu.png';
   }
   .partners-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 3rem 4rem;
+    grid-template-columns: auto auto;
+    gap: 3rem 6rem;
     align-items: center;
-    justify-items: center;
+    justify-content: start;
+  }
+  .partner-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
   }
   .partner-logo {
     display: flex;
@@ -343,6 +352,7 @@ import jhuLogo    from '../assets/img/logo-jhu.png';
   }
   @media (max-width: 600px) {
     .services-cols { grid-template-columns: repeat(2, 1fr); }
-    .partners-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .partners-grid { grid-template-columns: 1fr; gap: 2.5rem; justify-content: center; }
+    .partner-stack { gap: 1rem; }
   }
 </style>
