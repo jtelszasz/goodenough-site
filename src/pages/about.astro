@@ -92,4 +92,23 @@ import headshot from '../assets/img/Justin Elszasz Headshot 2026 02.JPG';
     object-fit: cover;
     object-position: center;
   }
+
+  /* ── Responsive ── */
+  @media (max-width: 768px) {
+    .about-inner {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      padding: 4rem 1.5rem;
+    }
+
+    .image {
+      order: -1;
+      display: flex;
+      justify-content: center;
+    }
+
+    .headline {
+      font-size: clamp(1.75rem, 5vw, 2.5rem);
+    }
+  }
 </style>
