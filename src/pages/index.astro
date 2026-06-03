@@ -1,11 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import MapboxCityMap from '../components/MapboxCityMap.astro';
-import coralLine from '../assets/img/GE-Coral-Line.png';
-import govexLogo  from '../assets/img/GovExLogo.png';
-import bcpiLogo   from '../assets/img/BCPI_blue.png';
-import everytownLogo from '../assets/img/Everytown_final_logo.svg';
-import jhuLogo    from '../assets/img/JHU.logo_vertical.blue.png';
+import coralLine from '../assets/img/coral-line.png';
+import govexLogo  from '../assets/img/logo-govex.png';
+import bcpiLogo   from '../assets/img/logo-bcpi.png';
+import everytownLogo from '../assets/img/logo-everytown.svg';
+import jhuLogo    from '../assets/img/logo-jhu.png';
 ---
 
 <Layout activePage="home">
@@ -132,11 +132,13 @@ import jhuLogo    from '../assets/img/JHU.logo_vertical.blue.png';
         <h2>Featured Partners</h2>
       </div>
       <div class="partners-grid">
-        <div class="partner-logo logo-govex">
-          <img src={govexLogo.src} alt="GovEx — Bloomberg Center for Government Excellence at Johns Hopkins" />
-        </div>
-        <div class="partner-logo logo-bcpi">
-          <img src={bcpiLogo.src} alt="Bloomberg Center for Public Innovation at Johns Hopkins" />
+        <div class="partner-stack">
+          <div class="partner-logo logo-govex">
+            <img src={govexLogo.src} alt="GovEx — Bloomberg Center for Government Excellence at Johns Hopkins" />
+          </div>
+          <div class="partner-logo logo-bcpi">
+            <img src={bcpiLogo.src} alt="Bloomberg Center for Public Innovation at Johns Hopkins" />
+          </div>
         </div>
         <div class="partner-logo logo-everytown">
           <img src={everytownLogo.src} alt="Everytown for Gun Safety" />
@@ -311,27 +313,37 @@ import jhuLogo    from '../assets/img/JHU.logo_vertical.blue.png';
   }
   .partners-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 4rem 3rem;
     align-items: center;
     justify-items: center;
+  }
+  .partner-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
   }
   .partner-logo {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 120px;
-    opacity: 0.6;
+    width: auto;
+    height: 400px;
+    opacity: 0.40;
     transition: opacity 0.25s;
   }
   .partner-logo:hover { opacity: 1; }
   .partner-logo img {
-    height: 120px;
+    height: 400px;
     width: auto;
     object-fit: contain;
     display: block;
   }
+  /* Optical balancing: the compact Everytown mark and the JHU shield read
+     larger than the long GovEx/BCPI lockups at equal height, so scale them down. */
+  .logo-everytown img { height: 70px; }
+  .logo-jhu img { height: 84px; }
 
   /* ── Responsive ── */
   @media (max-width: 900px) {
@@ -339,6 +351,7 @@ import jhuLogo    from '../assets/img/JHU.logo_vertical.blue.png';
   }
   @media (max-width: 600px) {
     .services-cols { grid-template-columns: repeat(2, 1fr); }
-    .partners-grid { grid-template-columns: repeat(2, 1fr); gap: 2.5rem; }
+    .partners-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .partner-stack { gap: 1.5rem; }
   }
 </style>

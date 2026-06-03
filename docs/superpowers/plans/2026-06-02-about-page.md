@@ -81,7 +81,7 @@ Create `/src/pages/about.astro`:
 ```astro
 ---
 import Layout from '../layouts/Layout.astro';
-import headshot from '../assets/img/Justin Elszasz Headshot 2026 02.JPG';
+import headshot from '../assets/img/justin-elszasz-headshot.jpg';
 ---
 
 <Layout activePage="about">

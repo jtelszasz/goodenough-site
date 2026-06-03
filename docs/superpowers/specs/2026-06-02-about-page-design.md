@@ -9,7 +9,7 @@ Add an "About" page to the Good Enough site featuring a two-column layout with J
 
 ## User Requirements
 
-- Add headshot from `/src/assets/img/Justin Elszasz Headshot 2026 02.JPG`
+- Add headshot from `/src/assets/img/justin-elszasz-headshot.jpg`
 - Image should not be very large
 - Image cropped into a circle
 - Placeholder text for describing why GE was founded and Justin's experience
@@ -52,7 +52,7 @@ Add an "About" page to the Good Enough site featuring a two-column layout with J
 
 ### Import & Rendering
 ```astro
-import headshot from '../assets/img/Justin Elszasz Headshot 2026 02.JPG';
+import headshot from '../assets/img/justin-elszasz-headshot.jpg';
 ```
 
 ### Styling Specifications
