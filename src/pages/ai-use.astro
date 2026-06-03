@@ -1,0 +1,138 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="AI @ GE" activePage="ai-use">
+
+  <div class="ai-hero">
+    <p class="ai-hero-label">Transparency &amp; Practice</p>
+    <h1>How we use AI</h1>
+    <p class="ai-hero-body">
+      Good Enough is built from the ground up with AI. It's a meaningful part of how we operate, but we're deliberate about where it helps and where it doesn't belong. Here's our policy, in plain terms.
+    </p>
+  </div>
+
+  <div class="ai-grid">
+
+    <!-- How GE uses AI -->
+    <div class="ai-panel uses">
+      <div class="ai-panel-label uses">Where AI helps</div>
+      <h2>How GE uses AI</h2>
+      <ul class="ai-list">
+        <li><strong>Agentic workflows.</strong> We use AI agents to automate multi-step research, data processing, and administrative tasks end-to-end.</li>
+        <li><strong>Rapid prototyping.</strong> AI accelerates early-stage design by generating working drafts of app interfaces, dashboards, data visualizations, and graphics for review and iteration.</li>
+        <li><strong>Code execution.</strong> AI writes, runs, and debugs code for data analysis, automation scripts, and technical prototypes.</li>
+        <li><strong>Research.</strong> AI accelerates literature reviews, policy scans, and landscape analyses by synthesizing large volumes of information quickly.</li>
+        <li><strong>Planning.</strong> We use AI to structure project plans, outline deliverables, and map dependencies before work begins.</li>
+        <li><strong>Guidance.</strong> AI helps surface relevant frameworks, precedents, and best practices.</li>
+        <li><strong>Troubleshooting.</strong> AI assists in diagnosing technical problems, errors, and blockers across tools and workflows.</li>
+        <li><strong>Meeting notetaking and storage.</strong> AI transcribes and summarizes meetings so key decisions and action items are captured and searchable.</li>
+      </ul>
+    </div>
+
+    <!-- How GE does NOT use AI -->
+    <div class="ai-panel not">
+      <div class="ai-panel-label not">Where it doesn't belong</div>
+      <h2>How GE does not use AI</h2>
+      <ul class="ai-list">
+        <li><strong>Decision-making.</strong> While AI has turbocharged our motor, you are still at the wheel. We do not automate decisions using AI. </li>
+        <li><strong>Writing.</strong> Writing = thinking. Our published work, proposals, and thought leadership reflect our own thinking and voice — not AI-generated text.</li>
+        
+      </ul>
+    </div>
+
+    <!-- When GE uses AI -->
+    <div class="ai-panel when">
+      <div class="ai-panel-label when">Our commitments</div>
+      <h2>When GE uses AI</h2>
+      <ul class="ai-list">
+        <li><strong>We are transparent and note that AI is being used.</strong> Clients and partners are told when AI is part of a deliverable or workflow.</li>
+        <li><strong>We check for bias.</strong> We actively review AI outputs for implicit assumptions, missing perspectives, and the likelihood that skewed data were used in model training before acting on them.</li>
+        <li><strong>We de-identify data and context.</strong> Sensitive client information is stripped or anonymized before being passed to any AI tool.</li>
+        <li><strong>We double-check work and take responsibility for the quality of the outputs.</strong> We verify every result and stand behind everything we deliver.</li>
+      </ul>
+    </div>
+
+  </div>
+
+</Layout>
+
+<style>
+  /* ── Hero ── */
+  .ai-hero {
+    max-width: 72rem;
+    margin: 0 auto;
+    padding: 6rem 1.5rem 5rem;
+    border-bottom: 1px solid rgba(23, 23, 23, 0.10);
+  }
+  .ai-hero-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--teal);
+    margin-bottom: 1.5rem;
+  }
+  h1 {
+    font-family: 'Didot', 'GFS Didot', Georgia, serif;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.5rem;
+    max-width: 52rem;
+  }
+  .ai-hero-body {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    max-width: 44rem;
+    color: var(--n700);
+  }
+
+  /* ── Policy grid ── */
+  .ai-grid {
+    max-width: 72rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1px;
+    background: rgba(23, 23, 23, 0.10);
+  }
+  .ai-panel {
+    background: var(--bg);
+    padding: 3rem 2.5rem;
+  }
+  .ai-panel-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin-bottom: 1.25rem;
+  }
+  .ai-panel-label.uses { color: var(--teal); }
+  .ai-panel-label.not  { color: var(--accent); }
+  .ai-panel-label.when { color: var(--cobalt); }
+  .ai-panel h2 {
+    font-family: 'Didot', 'GFS Didot', Georgia, serif;
+    font-size: 1.6rem;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+    letter-spacing: -0.01em;
+  }
+  .ai-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+  }
+  .ai-list li {
+    font-size: 1rem;
+    color: var(--n700);
+    line-height: 1.55;
+  }
+  .ai-list li strong {
+    color: var(--n900);
+    font-weight: 600;
+  }
+
+  @media (max-width: 900px) {
+    .ai-grid { grid-template-columns: 1fr; }
+  }
+</style>
