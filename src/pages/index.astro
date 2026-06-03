@@ -120,7 +120,9 @@ import jhuLogo    from '../assets/img/logo-jhu.png';
     <div class="cities-inner">
       <div class="cities-header">
         <h2>Our Reach</h2>
+        <p>Good Enough is proud to have supported governments and institutions across the U.S. and Canada.</p>
       </div>
+      
       <MapboxCityMap />
     </div>
   </section>
@@ -222,15 +224,20 @@ import jhuLogo    from '../assets/img/logo-jhu.png';
     padding: 6rem 1.5rem;
   }
   .services-header {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
     margin-bottom: 4rem;
   }
   .services-header h2 {
     font-family: 'Didot', 'GFS Didot', Georgia, serif;
     font-size: clamp(2rem, 4vw, 3rem);
     letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+  }
+  .services-header p {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: var(--n700);
+    max-width: 50rem;
+    margin: 0;
   }
   .services-cols {
     display: grid;
@@ -281,15 +288,20 @@ import jhuLogo    from '../assets/img/logo-jhu.png';
     padding: 6rem 1.5rem;
   }
   .cities-header {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
     margin-bottom: 3rem;
   }
   .cities-header h2 {
     font-family: 'Didot', 'GFS Didot', Georgia, serif;
     font-size: clamp(2rem, 4vw, 3rem);
     letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+  }
+  .cities-header p {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: var(--n700);
+    max-width: 50rem;
+    margin: 0;
   }
 
   /* ── Partners ── */
@@ -300,51 +312,56 @@ import jhuLogo    from '../assets/img/logo-jhu.png';
   .partners-inner {
     max-width: 72rem;
     margin: 0 auto;
-    padding: 3.5rem 1.5rem;
+    padding: 3.5rem .5rem;
   }
   .partners-header {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
     margin-bottom: 2.5rem;
   }
   .partners-header h2 {
     font-family: 'Didot', 'GFS Didot', Georgia, serif;
     font-size: clamp(2rem, 4vw, 3rem);
     letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+  }
+  .partners-header p {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: var(--n700);
+    max-width: 50rem;
+    margin: 0;
   }
   .partners-grid {
     display: grid;
     grid-template-columns: auto auto;
-    gap: 0.5rem 2rem;
+    gap: 2.5rem 5.5rem;
     align-items: center;
-    justify-content: start;
+    justify-content: center;
   }
   .partner-stack {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 1rem;
   }
   .partner-logo {
     display: flex;
     align-items: center;
     justify-content: center;
     width: auto;
-    height: 400px;
+    height: 200px;
     opacity: 0.40;
     transition: opacity 0.25s;
   }
   .partner-logo:hover { opacity: 1; }
   .partner-logo img {
-    height: 400px;
-    width: auto;
+    height: 60px;
+    width: 100%;
     object-fit: contain;
     display: block;
   }
   /* Optical balancing: the compact Everytown mark and the JHU shield read
      larger than the long GovEx/BCPI lockups at equal height, so scale them down. */
-  .logo-everytown img { height: 70px; }
-  .logo-jhu img { height: 84px; }
+  .logo-everytown img { height: 100px; }
+  .logo-jhu img { height: 132px; }
 
   /* ── Responsive ── */
   @media (max-width: 900px) {
