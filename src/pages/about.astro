@@ -1,0 +1,39 @@
+---
+import Layout from '../layouts/Layout.astro';
+import headshot from '../assets/img/Justin Elszasz Headshot 2026 02.JPG';
+---
+
+<Layout activePage="about">
+
+  <section class="about">
+    <div class="about-inner">
+
+      <div class="content">
+        <h1 class="headline">Building capacity for cities that need it most</h1>
+
+        <div class="bio">
+          <p>
+            [Why you founded Good Enough — your motivation, the gap you identified in how cities
+            access technical capacity, and your vision for what good enough means in the public sector.]
+          </p>
+
+          <p>
+            [Your background and experience — the roles, organizations, and work that positioned you
+            to build Good Enough. Include relevant expertise in data, AI, digital services, city operations,
+            or innovation that informs your approach.]
+          </p>
+
+          <p>
+            [Additional context about your approach or philosophy, if needed.]
+          </p>
+        </div>
+      </div>
+
+      <div class="image">
+        <img src={headshot.src} alt="Justin Elszasz" />
+      </div>
+
+    </div>
+  </section>
+
+</Layout>
