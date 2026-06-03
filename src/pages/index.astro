@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import MapboxCityMap from '../components/MapboxCityMap.astro';
 import coralLine from '../assets/img/GE-Coral-Line.png';
 import govexLogo  from '../assets/img/GovExLogo.png';
 import bcpiLogo   from '../assets/img/BCPI_blue.png';
@@ -111,6 +112,16 @@ import jhuLogo    from '../assets/img/JHU.logo_vertical.blue.png';
         </div>
 
       </div>
+    </div>
+  </section>
+
+  <!-- ── CITIES MAP ── -->
+  <section class="cities-map">
+    <div class="cities-inner">
+      <div class="cities-header">
+        <h2>Our Reach</h2>
+      </div>
+      <MapboxCityMap />
     </div>
   </section>
 
@@ -253,6 +264,28 @@ import jhuLogo    from '../assets/img/JHU.logo_vertical.blue.png';
     color: var(--n700);
     line-height: 1.6;
     font-size: 0.95rem;
+  }
+
+  /* ── Cities Map ── */
+  .cities-map {
+    border-top: 1px solid rgba(23, 23, 23, 0.10);
+    background: var(--bg);
+  }
+  .cities-inner {
+    max-width: 72rem;
+    margin: 0 auto;
+    padding: 6rem 1.5rem;
+  }
+  .cities-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+  }
+  .cities-header h2 {
+    font-family: 'Didot', 'GFS Didot', Georgia, serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    letter-spacing: -0.02em;
   }
 
   /* ── Partners ── */

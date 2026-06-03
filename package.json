@@ -12,6 +12,11 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^6.1.9"
+    "@mapbox/mapbox-sdk": "^0.16.2",
+    "@tailwindcss/vite": "^4.2.4",
+    "astro": "^6.1.9",
+    "dotenv": "^17.4.2",
+    "mapbox-gl": "^3.24.0",
+    "tailwindcss": "^4.2.4"
   }
 }
