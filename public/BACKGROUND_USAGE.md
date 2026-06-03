@@ -12,7 +12,7 @@ This folder contains the site's background pattern as an exportable file.
 ## Color Values
 
 - **Background**: `#D6D5C9` (warm beige/tan)
-- **Grid lines**: `rgba(11, 79, 138, 0.04)` (subtle blue at 4% opacity)
+- **Grid lines**: `rgba(11, 79, 138, 0.10)` (subtle blue at 10% opacity)
 - **Grid size**: 20px × 20px squares
 
 ## Usage
@@ -51,4 +51,4 @@ inkscape good-enough-background.svg --export-type=png --export-width=2560 --expo
 To change grid size or colors, edit the SVG file:
 - Grid size: Change `width="20" height="20"` in the pattern definition
 - Background color: Change `#D6D5C9` values
-- Grid opacity: Change `rgba(11, 79, 138, 0.04)` to adjust transparency
+- Grid opacity: Change `rgba(11, 79, 138, 0.10)` to adjust transparency
