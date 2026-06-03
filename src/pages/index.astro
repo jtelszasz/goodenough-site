@@ -132,13 +132,11 @@ import jhuLogo    from '../assets/img/logo-jhu.png';
         <h2>Featured Partners</h2>
       </div>
       <div class="partners-grid">
-        <div class="partner-stack">
-          <div class="partner-logo logo-govex">
-            <img src={govexLogo.src} alt="GovEx — Bloomberg Center for Government Excellence at Johns Hopkins" />
-          </div>
-          <div class="partner-logo logo-bcpi">
-            <img src={bcpiLogo.src} alt="Bloomberg Center for Public Innovation at Johns Hopkins" />
-          </div>
+        <div class="partner-logo logo-govex">
+          <img src={govexLogo.src} alt="GovEx — Bloomberg Center for Government Excellence at Johns Hopkins" />
+        </div>
+        <div class="partner-logo logo-bcpi">
+          <img src={bcpiLogo.src} alt="Bloomberg Center for Public Innovation at Johns Hopkins" />
         </div>
         <div class="partner-logo logo-everytown">
           <img src={everytownLogo.src} alt="Everytown for Gun Safety" />
@@ -313,16 +311,10 @@ import jhuLogo    from '../assets/img/logo-jhu.png';
   }
   .partners-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 4rem 3rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem 4rem;
     align-items: center;
     justify-items: center;
-  }
-  .partner-stack {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    width: 100%;
   }
   .partner-logo {
     display: flex;
@@ -352,6 +344,5 @@ import jhuLogo    from '../assets/img/logo-jhu.png';
   @media (max-width: 600px) {
     .services-cols { grid-template-columns: repeat(2, 1fr); }
     .partners-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-    .partner-stack { gap: 0.75rem; }
   }
 </style>
