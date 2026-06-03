@@ -144,11 +144,10 @@ const geojson = {
           projects = [];
         }
 
-        // Build project list HTML with multi-column layout
+        // Build project list HTML
         let projectsHTML = '';
         if (projects && projects.length > 0) {
-          const useColumns = projects.length > 2;
-          projectsHTML = `<div class="project-list ${useColumns ? 'multi-column' : ''}">`;
+          projectsHTML = `<div class="project-list">`;
           projects.forEach((project, index) => {
             const projectClass = projects.length > 1 ? 'project-item' : 'project-item-single';
             projectsHTML += `
@@ -291,7 +290,9 @@ const geojson = {
   :global(.map-popup) {
     padding: 1rem 1.25rem;
     min-width: 240px;
-    max-width: 800px;
+    max-width: 400px;
+    max-height: 400px;
+    overflow-y: auto;
   }
 
   :global(.map-popup h3) {
@@ -312,22 +313,9 @@ const geojson = {
     margin: 0;
   }
 
-  :global(.map-popup .project-list.multi-column) {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-    column-gap: 2rem;
-  }
-
   :global(.map-popup .project-item) {
     padding: 0.75rem 0;
     border-top: 1px solid rgba(23, 23, 23, 0.1);
-  }
-
-  :global(.map-popup .multi-column .project-item) {
-    padding: 0;
-    border-top: none;
-    break-inside: avoid;
   }
 
   :global(.map-popup .project-item:first-child) {
