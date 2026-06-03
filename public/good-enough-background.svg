@@ -1,0 +1,15 @@
+<svg width="1920" height="1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- 20x20px grid pattern -->
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <rect width="20" height="20" fill="#D6D5C9"/>
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(11, 79, 138, 0.04)" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="#D6D5C9"/>
+
+  <!-- Grid overlay -->
+  <rect width="1920" height="1080" fill="url(#grid)"/>
+</svg>
