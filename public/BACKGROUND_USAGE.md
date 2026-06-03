@@ -5,6 +5,9 @@ This folder contains the site's background pattern as an exportable file.
 ## Files
 
 - **good-enough-background.svg** - Scalable vector background with 20px grid pattern
+- **good-enough-background-1080p.png** - PNG version at 1920×1080 (HD presentation size)
+- **good-enough-background-4k.png** - PNG version at 3840×2160 (4K)
+- **good-enough-background-square.png** - PNG version at 2000×2000 (square format)
 
 ## Color Values
 
@@ -15,7 +18,7 @@ This folder contains the site's background pattern as an exportable file.
 ## Usage
 
 ### In PowerPoint/Keynote
-1. Insert → Image → Select `good-enough-background.svg`
+1. Insert → Image → Select `good-enough-background-1080p.png` (or SVG for scalability)
 2. Right-click image → Send to Back
 3. Resize to fill slide
 
@@ -24,28 +27,23 @@ This folder contains the site's background pattern as an exportable file.
 2. Use as background or create component
 3. SVG scales perfectly to any size
 
-### Export as PNG
-If you need a raster image:
+### PNG Files Included
+Pre-rendered PNG versions are included in three sizes:
+- **1080p** (1920×1080) - Standard HD presentation size (~61KB)
+- **4K** (3840×2160) - High resolution for print/large displays (~238KB)
+- **Square** (2000×2000) - For social media or square formats (~210KB)
 
-**Using browser:**
-1. Open `good-enough-background.svg` in Chrome/Firefox
-2. Right-click → Save Image As → PNG
+### Create Custom PNG Sizes
+If you need a different size, you can convert the SVG:
 
 **Using ImageMagick:**
 ```bash
-# 1920x1080 (HD presentation)
-magick good-enough-background.svg -resize 1920x1080 background-1080p.png
-
-# 3840x2160 (4K)
-magick good-enough-background.svg -resize 3840x2160 background-4k.png
-
-# Custom size
-magick good-enough-background.svg -resize 2000x2000 background-custom.png
+magick good-enough-background.svg -resize 2560x1440 background-custom.png
 ```
 
-### Using Inkscape:
+**Using Inkscape:**
 ```bash
-inkscape good-enough-background.svg --export-type=png --export-width=1920 --export-height=1080
+inkscape good-enough-background.svg --export-type=png --export-width=2560 --export-height=1440
 ```
 
 ## Customization
