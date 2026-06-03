@@ -8,21 +8,15 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "preview": "npm run build && wrangler dev",
-    "astro": "astro",
-    "generate-types": "wrangler types",
-    "deploy": "npm run build && wrangler deploy"
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/cloudflare": "^13.6.1",
     "@mapbox/mapbox-sdk": "^0.16.2",
     "@tailwindcss/vite": "^4.2.4",
     "astro": "^6.4.3",
     "dotenv": "^17.4.2",
     "mapbox-gl": "^3.24.0",
     "tailwindcss": "^4.2.4"
-  },
-  "devDependencies": {
-    "wrangler": "^4.97.0"
   }
 }
