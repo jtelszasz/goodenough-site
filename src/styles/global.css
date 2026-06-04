@@ -1,25 +1,5 @@
 /* ── Fonts ─────────────────────────────────────────────────── */
-@font-face {
-  font-family: 'Didot';
-  src: url('/fonts/Didot.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Didot';
-  src: url('/fonts/Didot-Bold.woff2') format('woff2');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Avenir Next Condensed';
-  src: url('/fonts/AvenirNextCondensed-Regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Barlow+Semi+Condensed:wght@400;600&display=swap');
 
 @import "tailwindcss";
 
@@ -29,8 +9,8 @@
   --color-cobalt: #2708A0;
   --color-teal:   #006D77;
   --color-accent: #FC5130;
-  --font-heading: Didot, "GFS Didot", serif;
-  --font-body:    "Avenir Next Condensed", "Helvetica Neue", sans-serif;
+  --font-heading: "Playfair Display", Georgia, serif;
+  --font-body:    "Barlow Semi Condensed", "Helvetica Neue", sans-serif;
 }
 
 /* ── CSS custom props ──────────────────────────────────────── */
@@ -50,7 +30,7 @@
 body {
   background-color: var(--bg);
   color: var(--n900);
-  font-family: 'Avenir Next Condensed', 'Helvetica Neue', Arial, sans-serif;
+  font-family: "Barlow Semi Condensed", "Helvetica Neue", Arial, sans-serif;
   min-height: 100vh;
   background-image:
     linear-gradient(to right,  rgba(11, 79, 138, 0.10) 1px, transparent 1px),
