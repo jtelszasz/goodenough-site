@@ -1,36 +1,49 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import headshot from '../assets/img/justin-elszasz-headshot.jpg';
+import Layout from "../layouts/Layout.astro";
+import headshot from "../assets/img/justin-elszasz-headshot.jpg";
 ---
 
 <Layout activePage="about">
-
   <section class="about">
     <div class="about-inner">
-
       <div class="content">
-        <p class="about-label">JUSTIN AND THE STORY BEHIND GOOD ENOUGH</p>
-        <h1>An ally who has been there</h1>
+        <p class="about-label">THE STORY BEHIND GOOD ENOUGH</p>
+        <h1>A fellow public servant who can help</h1>
 
         <div class="bio">
           <p>
-            During World War II, the phrase "good enough for government" meant that something met rigorous standards. It was a badge of honor.
-            Today, the phrase is a punchline, not a reality. It's uttered when something barely passes muster. The phrase
-            has become infused with a sense of cynicism and resignation. It's a sign of the times.
+            During World War II, the phrase "good enough for government" meant
+            that something met rigorous standards. It was a stamp of approval.
+            Today, the phrase is a punchline, not a reality. It's uttered when
+            something barely passes muster. The phrase has become infused with a
+            sense of cynicism and resignation.
           </p>
 
           <p>
-            
+            Good Enough was founded to reclaim that phrase for the public
+            sector.
+          </p>
+          <h2 class="bio-heading">About Justin</h2>
+          <p>
+            Justin Elszasz is a public servant, civic technologist, and maker
+            with 20 years of experience in spanning engineering, public policy
+            and administration, data and AI, and innovation. Previously, Justin
+            served as Chief Data Officer for the City of Baltimore and Interim
+            Director of the Mayor's Office of Performance & Innovation. He built
+            Baltimore's first Digital Services team, launched the Baltimore Data
+            Academy, and created the Data Fellows program to recruit and embed
+            analysts across city agencies. Justin's work has been recognized by
+          </p>
+          <p>
+            Justin serves on the board of directors at Open Works, the country's
+            largest non-profit makerspace, and has taught graduate-level data
+            visualization at the Maryland Institute College of Art. He holds an
+            M.S. from Columbia University and a B.S. from Case Western Reserve
+            University, both in mechanical engineering.
           </p>
 
           <p>
-            [Your background and experience — the roles, organizations, and work that positioned you
-            to build Good Enough. Include relevant expertise in data, AI, digital services, city operations,
-            or innovation that informs your approach.]
-          </p>
-
-          <p>
-            [Additional context about your approach or philosophy, if needed.]
+            <!--[Additional context about your approach or philosophy, if needed.]-->
           </p>
         </div>
       </div>
@@ -38,16 +51,14 @@ import headshot from '../assets/img/justin-elszasz-headshot.jpg';
       <div class="image">
         <img src={headshot.src} alt="Justin Elszasz" />
       </div>
-
     </div>
   </section>
-
 </Layout>
 
 <style>
   /* ── About Section ── */
   .about {
-    border-bottom: 1px solid rgba(23, 23, 23, 0.10);
+    border-bottom: 1px solid rgba(23, 23, 23, 0.1);
   }
 
   .about-inner {
@@ -74,7 +85,7 @@ import headshot from '../assets/img/justin-elszasz-headshot.jpg';
   }
 
   h1 {
-    font-family: 'Didot', 'GFS Didot', Georgia, serif;
+    font-family: "Didot", "GFS Didot", Georgia, serif;
     font-size: clamp(2.5rem, 6vw, 4.5rem);
     line-height: 1.05;
     letter-spacing: -0.02em;
@@ -86,6 +97,13 @@ import headshot from '../assets/img/justin-elszasz-headshot.jpg';
     color: var(--n700);
     font-size: 1.125rem;
     line-height: 1.7;
+  }
+
+  .bio-heading {
+    font-size: 1.5rem;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.5rem;
   }
 
   .bio p {
