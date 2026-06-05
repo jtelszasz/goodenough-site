@@ -54,7 +54,13 @@ const { title = 'Good Enough — Reclaiming Good Enough for Government', activeP
 <style>
   /* ── Nav ── */
   header {
-    border-bottom: 1px solid rgba(23, 23, 23, 0.10);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: var(--bg);
+    background-image: var(--bg-grid);
+    background-size: var(--bg-grid-size);
+    background-attachment: fixed;
   }
   .nav-inner {
     max-width: 72rem;
@@ -90,9 +96,6 @@ const { title = 'Good Enough — Reclaiming Good Enough for Government', activeP
   }
 
   /* ── Footer ── */
-  footer {
-    border-top: 1px solid rgba(23, 23, 23, 0.10);
-  }
   .footer-inner {
     max-width: 72rem;
     margin: 0 auto;
